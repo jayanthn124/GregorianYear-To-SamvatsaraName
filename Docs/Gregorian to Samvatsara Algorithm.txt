@@ -1,0 +1,22 @@
+# ================================================================= #
+-------------- Gregorian to Samvatsara Algorithm --------------------
+# ================================================================= #
+
+1. Create a list of Names of all the Samvatsaras in a Samvatsara Cycle.
+2. Ask the User for Input of the Gregorian Year - BCE (in negative numbers) or CE (in positive numbers).
+3. First omit the possibility of giving ZERO as an input as Year ZERO does not existin Gregorian calendar.
+4. Take the -54 BCE to 6 CE as the Reference Cycle.
+5. Calculate the number of years from the Ref Start Cycle (i.e. 54 BCE)
+6. If it falls in the Reference Samvatsara Cycle (54 BCE to 6 CE), calculate the Samvatsara Index.
+7. If the input number is greater than zero, then Samvatsara Index is equals to 1 more than the number of years calculated in step 5.
+8. We add 1, becuase we have to omit a year between 1BCE and 1 CE.
+9. If the input number is lesser than zero, then Samvatsara Index is equals to the number of years calculated in step 5.
+10. If the input number falls beyond (i.e. either in the past or future of) the reference cycle, then calculate the Cycle Number.
+11. The Cycle Number is equal to the ratio of Number of years (calculated in step 5) to Samvatsara Cycle (which is equal to 60).
+12. Take the non floating part of that number as the cycle number.
+13. If the input number is greater than zero, then add 1 to the cycle number.
+14. Calculate the Start of the Samvatsara Cycle of that input number by subtracting the start of reference cycle number (54 BCE) with the product of the Samvatsara cycle (which is 60) times of cycle number.
+15. If the input number is greater than zero, then add 1 to the Start of Samvatsara Cycle Number.
+16. Calculate the End of the Samvatsara Cycle by adding 59 (because including the start number it is 60) to the Start of the Samvatsara Cycle.
+17. Calculate the Samvatsara Index by subtracting the given input number with the calculated Start of the Samvatsara Cycle (in step 14 and/or 15).
+18. Pluck the Samvatsara Name from the List accoring to the Samvatsara Index Number calculated in either step 7 or 9 or 17.
